@@ -1,7 +1,23 @@
-My nix-darwin configuration.
+My dotfiles
+
+## How can I use these dotfiles?
+
+Prior to the installation make sure you have committed the alias to you `.bashrc` or `.zshrc`:
+```
+alias config="git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+```
+
+Now clone this repository
+```
+git clone --bare https://github.com/builditluc/dotfiles $HOME/dotfiles
+```
+
+Checkout the actual content from the bare repository to your `$HOME`:
+```
+config checkout
+```
 
 ## Installing
-> Permission denied error: `sudo chown -R builditluc /nix`
 ### Install nix
 ```
 sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
@@ -30,3 +46,8 @@ update-nix-fetchgit $HOME/.config/nixpkgs/home.nix && nix-channel --update && da
 ```
 
 And you're ready to go!
+
+
+## Acknowledgements
+
+- https://www.atlassian.com/git/tutorials/dotfiles
