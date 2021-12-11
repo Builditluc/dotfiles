@@ -1,0 +1,79 @@
+21/11/21 (22:02:10) | ERROR: Data collection thread failed with exception: [Errno 6] Device not configured
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3547, in _collect
+    up_stat = psutil.net_if_stats()
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2216, in net_if_stats
+    return _psplatform.net_if_stats()
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/_psosx.py", line 266, in net_if_stats
+    mtu = cext_posix.net_if_mtu(name)
+OSError: [Errno 6] Device not configured
+21/11/21 (22:02:10) | WARNING: Exiting with errorcode (1). Runtime 0:35:29 
+
+22/11/21 (02:57:15) | ERROR: Data collection thread failed with exception: [Errno 12] Cannot allocate memory
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3567, in _collect
+    io_all = psutil.net_io_counters(pernic=True)[cls.nic]
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2109, in net_io_counters
+    rawdict = _psplatform.net_io_counters()
+OSError: [Errno 12] Cannot allocate memory
+22/11/21 (02:57:15) | WARNING: Exiting with errorcode (1). Runtime 4:51:27 
+
+22/11/21 (06:49:13) | ERROR: Data collection thread failed with exception: [Errno 12] Cannot allocate memory
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3567, in _collect
+    io_all = psutil.net_io_counters(pernic=True)[cls.nic]
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2109, in net_io_counters
+    rawdict = _psplatform.net_io_counters()
+OSError: [Errno 12] Cannot allocate memory
+22/11/21 (06:49:13) | WARNING: Exiting with errorcode (1). Runtime 0:50:32 
+
+22/11/21 (23:58:22) | ERROR: Data collection thread failed with exception: [Errno 12] Cannot allocate memory
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3567, in _collect
+    io_all = psutil.net_io_counters(pernic=True)[cls.nic]
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2109, in net_io_counters
+    rawdict = _psplatform.net_io_counters()
+OSError: [Errno 12] Cannot allocate memory
+22/11/21 (23:58:22) | WARNING: Exiting with errorcode (1). Runtime 7:09:32 
+
+03/12/21 (22:50:11) | ERROR: Data collection thread failed with exception: [Errno 12] Cannot allocate memory
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3567, in _collect
+    io_all = psutil.net_io_counters(pernic=True)[cls.nic]
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2109, in net_io_counters
+    rawdict = _psplatform.net_io_counters()
+OSError: [Errno 12] Cannot allocate memory
+03/12/21 (22:50:11) | WARNING: Exiting with errorcode (1). Runtime 2:18:30 
+
+04/12/21 (12:50:36) | ERROR: Data collection thread failed with exception: [Errno 12] Cannot allocate memory
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3567, in _collect
+    io_all = psutil.net_io_counters(pernic=True)[cls.nic]
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2109, in net_io_counters
+    rawdict = _psplatform.net_io_counters()
+OSError: [Errno 12] Cannot allocate memory
+04/12/21 (12:50:36) | WARNING: Exiting with errorcode (1). Runtime 1:02:11 
+
+05/12/21 (01:07:07) | ERROR: Data collection thread failed with exception: [Errno 12] Cannot allocate memory
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 2938, in _runner
+    collector._collect()
+  File "/usr/local/bin/bpytop", line 3567, in _collect
+    io_all = psutil.net_io_counters(pernic=True)[cls.nic]
+  File "/usr/local/Cellar/bpytop/1.0.67_2/libexec/lib/python3.10/site-packages/psutil/__init__.py", line 2109, in net_io_counters
+    rawdict = _psplatform.net_io_counters()
+OSError: [Errno 12] Cannot allocate memory
+05/12/21 (01:07:07) | WARNING: Exiting with errorcode (1). Runtime 4:18:30 
+
