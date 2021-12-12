@@ -26,7 +26,7 @@
   homebrew.cleanup = "zap";
   homebrew.taps = [ "homebrew/bundle" "homebrew/cask" "homebrew/core" ];
   homebrew.brews = [ "python@3.10" "bpytop" "iperf3" "lolcat" "pinentry" ];
-  homebrew.casks = [ "firefox" "steam" "rectangle" "docker" "onlyoffice" "discord" "betterdiscord-installer" "obs" ];
+  homebrew.casks = [ "firefox" "steam" "rectangle" "docker" "onlyoffice" "discord" "betterdiscord-installer" "obs" "alacritty" ];
 
   homebrew.masApps = {
     "Dark Reader" = 1438243180;
@@ -59,5 +59,7 @@
     loginwindow.autoLoginUser = "builditluc";
   };
 
-  system.activationScripts.extraUserActivation.text = "defaults write com.knollsoft.Rectangle gapSize -int 10";
+  system.activationScripts.extraUserActivation.text = ''
+    defaults write com.knollsoft.Rectangle gapSize -int 10
+  '';
 }
