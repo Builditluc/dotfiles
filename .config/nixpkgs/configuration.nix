@@ -8,7 +8,6 @@
 
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
-  nix.extraOptions = "experimental-features = nix-command";
 
   programs.zsh.enable = true;
   programs.zsh.enableCompletion = false;

@@ -49,6 +49,7 @@ in {
     pkgs.nms
     pkgs.mpv
     pkgs.vifm
+    pkgs.exa
 
     pkgs.neofetch
     pkgs.onefetch
@@ -63,12 +64,15 @@ in {
     pkgs.python39Packages.python-lsp-server
     pkgs.python39Packages.python-lsp-black
   ];
-
+  
+  xdg.configFile."nix/nix.conf".text = ''
+    experimental-features = nix-command flakes
+    '';
 
   programs.zsh = {
     enable = true;
     shellAliases = {
-      ll = "ls -lah";
+      ls = "exa";
       c = "cargo";
       vf = "vifm";
       v = "nvim";
@@ -218,6 +222,8 @@ in {
       spelllang = "en";
       scrolloff = 20;
       cursorline = true;
+      ttymouse = "sgr";
+      mouse = "a";
     };
     maps = {
       normal."<c-k>" = {
