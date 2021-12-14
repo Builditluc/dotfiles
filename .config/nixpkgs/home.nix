@@ -222,7 +222,6 @@ in {
       spelllang = "en";
       scrolloff = 20;
       cursorline = true;
-      ttymouse = "sgr";
       mouse = "a";
     };
     maps = {
