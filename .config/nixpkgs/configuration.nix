@@ -60,5 +60,6 @@
 
   system.activationScripts.extraUserActivation.text = ''
     defaults write com.knollsoft.Rectangle gapSize -int 10
+    osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/builditluc/wallpaper.png"'
   '';
 }
