@@ -24,8 +24,25 @@
   homebrew.enable = true;
   homebrew.cleanup = "zap";
   homebrew.taps = [ "homebrew/bundle" "homebrew/cask" "homebrew/core" ];
-  homebrew.brews = [ "python@3.10" "bpytop" "iperf3" "lolcat" "pinentry" ];
-  homebrew.casks = [ "firefox" "steam" "rectangle" "docker" "onlyoffice" "discord" "betterdiscord-installer" "obs" "alacritty" ];
+  homebrew.brews = [ 
+    "python@3.10" 
+    "bpytop" 
+    "iperf3" 
+    "lolcat" 
+    "pinentry" 
+  ];
+  homebrew.casks = [ 
+    "firefox" 
+    "steam" 
+    "rectangle" 
+    "docker" 
+    "onlyoffice" 
+    "discord" 
+    "betterdiscord-installer" 
+    "obs" 
+    "alacritty" 
+    "enpass" 
+  ];
 
   homebrew.masApps = {
     "Dark Reader" = 1438243180;
@@ -34,6 +51,7 @@
     "iStudiez" = 402989379;
     "OneDrive" = 823766827;
     "Refined Github" = 1519867270;
+    "Enpass" = 732710998;
   };
 
   fonts.enableFontDir = true;

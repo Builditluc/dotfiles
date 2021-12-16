@@ -7,7 +7,7 @@ let
   # });
   nixvim = import (builtins.fetchGit {
     url = "https://github.com/builditluc/nixvim";
-    rev = "7b62f6352a8660c562ff43633e891a8ca266ffe6";
+    rev = "0cdf927789434e67f756ce6b54b1148874db1c2b";
     ref = "main";
   });
   nix-colors = builtins.fetchTarball "https://github.com/misterio77/nix-colors/archive/main.tar.gz"; 
