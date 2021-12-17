@@ -19,7 +19,14 @@
 
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
-  home-manager.users.builditluc.imports = [ ./home.nix ];
+  home-manager.users.builditluc.imports = [ 
+    ./hm/alacritty.nix
+    ./hm/direnv.nix
+    ./hm/git.nix
+    ./hm/nvim.nix
+    ./hm/zsh.nix
+    ./home.nix 
+  ];
 
   homebrew.enable = true;
   homebrew.cleanup = "zap";
