@@ -22,6 +22,7 @@
   home-manager.users.builditluc.imports = [ 
     ./hm/alacritty.nix
     ./hm/direnv.nix
+    ./hm/firefox.nix
     ./hm/git.nix
     ./hm/nvim.nix
     ./hm/zsh.nix
@@ -39,7 +40,6 @@
     "pinentry" 
   ];
   homebrew.casks = [ 
-    "firefox" 
     "steam" 
     "rectangle" 
     "docker" 
@@ -86,5 +86,6 @@
   system.activationScripts.extraUserActivation.text = ''
     defaults write com.knollsoft.Rectangle gapSize -int 10
     osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/builditluc/wallpaper.png"'
+    ln -sf ${pkgs.callPackage ./custom-pkgs/firefox { } }/Applications/Firefox.app /Applications
   '';
 }
