@@ -41,6 +41,13 @@ in
         silent = true;
         action = "<cmd>lua require(\"lspsaga.action\").smart_scroll_with_saga(1)<cr>";
       };
+      normal."<s-j>".action = "<c-w>j";
+      normal."<s-k>".action = "<c-w>k";
+      normal."<s-h>".action = "<c-w>h";
+      normal."<s-l>".action = "<c-w>l";
+
+      normal."<s-v>".action = "<c-w>v";
+      normal."<s-s>".action = "<c-w>s";
     };
     colorscheme = "nord";
     globals.mapleader = ";";
