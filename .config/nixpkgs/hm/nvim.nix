@@ -49,6 +49,7 @@ in
         enable = true;
         plugins = [
           { name = "tami5/lspsaga.nvim"; }
+          { name = "ahmedkhalf/project.nvim"; }
         ];
       };
       lualine = {
@@ -92,10 +93,13 @@ in
       comment-nvim.enable = true;
       nix.enable = true;
       easyescape.enable = true;
+      intellitab.enable = true;
+      treesitter.enable = true;
       floaterm = {
         enable = true;
         autoClose = 1;
       };
+      nvim-autopairs.enable = true;
       which-key = {
         enable = true;
         mappings = {
@@ -103,6 +107,7 @@ in
           "f" = [ "<cmd>Telescope find_files<cr>" "Fild File" ];
           "q" = [ "<cmd>q<cr>" "Quit" ];
           "w" = [ "<cmd>w<cr>" "Save" ];
+          "p" = [ "<cmd>Telescope projects<cr>" "Open Project" ];
           "b" = {
             name = "+Buffers";
             "b" = [ "<cmd>BufferLineCyclePrev<cr>" "Previous" ];
@@ -166,6 +171,11 @@ in
       '';
     extraConfigLua = ''
       require('todo-comments').setup{}
+
+      require('project_nvim').setup{
+        patterns = { ".git", "shell.nix", "Makefile", "package.json", "flake.nix" }
+      }
+      require('telescope').load_extension('projects')
 
       local lspkind = require('lspkind')
       local source_mapping = {
