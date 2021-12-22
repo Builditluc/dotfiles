@@ -1,15 +1,15 @@
 { pkgs, config, ... }:
 let
-  # nixvim = import "/Users/builditluc/Developing/nix/nixvim/default.nix";
+  nixvim = import "/Users/builditluc/Developing/nix/nixvim/default.nix";
   # nixvim = import (builtins.fetchGit {
   #   url = "https://github.com/pta2002/nixvim";
   #   rev = "e663c69032f16d963c568d5670708dff262048e3";
   # });
-  nixvim = import (builtins.fetchGit {
-    url = "https://github.com/builditluc/nixvim";
-    rev = "0cdf927789434e67f756ce6b54b1148874db1c2b";
-    ref = "main";
-  });
+  # nixvim = import (builtins.fetchGit {
+  #   url = "https://github.com/builditluc/nixvim";
+  #   rev = "0cdf927789434e67f756ce6b54b1148874db1c2b";
+  #   ref = "main";
+  # });
   colorscheme = (import ../colors.nix).colorscheme;
 in
 {
@@ -87,52 +87,8 @@ in
         enable = true;
         autoClose = 1;
       };
+      notify.enable = true;
       nvim-autopairs.enable = true;
-      which-key = {
-        enable = true;
-        mappings = {
-          "gcc" = { name = "Comment"; };
-          "f" = {
-            name = "+Files";
-            "f" = [ "<cmd>Telescope find_files<cr>" "Find File"];
-            "j" = [ "<cmd>FloatermNew vifm<cr>" "vifm"];
-          };
-          "q" = [ "<cmd>q<cr>" "Quit" ];
-          "w" = [ "<cmd>w<cr>" "Save" ];
-          "p" = [ "<cmd>Telescope projects<cr>" "Open Project" ];
-          "b" = {
-            name = "+Buffers";
-            "b" = [ "<cmd>BufferLineCyclePrev<cr>" "Previous" ];
-            "j" = [ "<cmd>BufferLinePick<cr>" "Jump" ];
-            "w" = [ "<cmd>bd<cr>" "Wipeout" ];
-          };
-          "g" = [ "<cmd>FloatermNew lazygit<cr>" "Lazygit" ];
-          "l" = {
-            name = "+LSP";
-            "d" = [ "<cmd>Telescope lsp_definitions<cr>" "Definitions" ];
-            "a" = [ "<cmd>Lspsaga code_action<cr>" "Code Actions" ];
-            "k" = [ "<cmd>Lspsaga hover_doc<cr>" "Hover Documentation" ];
-            "r" = [ "<cmd>Lspsaga rename<cr>" "Rename" ];
-            "t" = [ "<cmd>TroubleToggle<cr>" "Toggle Troube" ];
-          };
-          "r" = [ "<cmd>TodoTrouble<cr>" "List all project todos" ];
-          "t" = {
-            name = "+Train";
-            "u" = [ "<cmd>TrainUpDown<cr>" "Train for movements up and down" ];
-            "w" = [ "<cmd>TrainWord<cr>" "Train for movements related to words" ];
-            "o" = [ "<cmd>TrainTextObj<cr>" "Train for movements related to text objects" ];
-          };
-        };
-        mappingOptions = {
-          mode = "n";
-          prefix = "<leader>";
-        };
-        
-        options = {
-          showHelp = true;
-          window.border = "single";
-        };
-      };
     };
 
     extraPlugins = with pkgs.vimPlugins; [
@@ -169,6 +125,10 @@ in
         patterns = { ".git", "shell.nix", "Makefile", "package.json", "flake.nix" }
       }
       require('telescope').load_extension('projects')
+
+     local __which_key = require('which-key')
+__which_key.register({['b'] = {['b'] = {'<cmd>BufferLineCyclePrev<cr>','Previous'},['j'] = {'<cmd>BufferLinePick<cr>','Jump'},['name'] = '+Buffers',['w'] = {'<cmd>bd<cr>','Wipeout'}},['f'] = {['f'] = {'<cmd>Telescope find_files<cr>','Find File'},['j'] = {'<cmd>FloatermNew vifm<cr>','vifm'},['name'] = '+Files'},['g'] = {'<cmd>FloatermNew lazygit<cr>','Lazygit'},['gcc'] = {['name'] = 'Comment'},['l'] = {['a'] = {'<cmd>Lspsaga code_action<cr>','Code Actions'},['d'] = {'<cmd>Telescope lsp_definitions<cr>','Definitions'},['k'] = {'<cmd>Lspsaga hover_doc<cr>','Hover Documentation'},['name'] = '+LSP',['r'] = {'<cmd>Lspsaga rename<cr>','Rename'},['t'] = {'<cmd>TroubleToggle<cr>','Toggle Troube'}},['p'] = {'<cmd>Telescope projects<cr>','Open Project'},['q'] = {'<cmd>q<cr>','Quit'},['r'] = {'<cmd>TodoTrouble<cr>','List all project todos'},['t'] = {['name'] = '+Train',['o'] = {'<cmd>TrainTextObj<cr>','Train for movements related to text objects'},['u'] = {'<cmd>TrainUpDown<cr>','Train for movements up and down'},['w'] = {'<cmd>TrainWord<cr>','Train for movements related to words'}},['w'] = {'<cmd>w<cr>','Save'}}, {['mode'] = 'n',['prefix'] = '<leader>'})
+      __which_key.setup{['show_help'] = true,['window'] = {['border'] = 'single'}}
 
       local lspkind = require('lspkind')
       local source_mapping = {
