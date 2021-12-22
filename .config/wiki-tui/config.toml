@@ -9,3 +9,6 @@ search_match = "f7768e"
 
 [theme.search_bar]
 background = "black"
+
+[parser]
+toc = false

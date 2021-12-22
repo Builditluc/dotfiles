@@ -61,25 +61,6 @@ in
       };
       lualine = {
         enable = true;
-        componentSeparators = {
-          left = "";
-          right = "";
-        };
-        sectionSeparators = {
-          left = "";
-          right = "";
-        };
-        sections = {
-          lualine_a = {
-            mode = "branch";
-            icon = "";
-          };
-          lualine_b.mode = "filename";
-          lualine_c.mode = "";
-          lualine_x.mode = "filetype";
-          lualine_y.mode = "";
-          lualine_z.mode = "mode";
-        };
       };
       telescope = {
         enable = true;
@@ -111,7 +92,11 @@ in
         enable = true;
         mappings = {
           "gcc" = { name = "Comment"; };
-          "f" = [ "<cmd>Telescope find_files<cr>" "Fild File" ];
+          "f" = {
+            name = "+Files";
+            "f" = [ "<cmd>Telescope find_files<cr>" "Find File"];
+            "j" = [ "<cmd>FloatermNew vifm<cr>" "vifm"];
+          };
           "q" = [ "<cmd>q<cr>" "Quit" ];
           "w" = [ "<cmd>w<cr>" "Save" ];
           "p" = [ "<cmd>Telescope projects<cr>" "Open Project" ];
@@ -175,6 +160,7 @@ in
     ];
     extraConfigVim = ''
       hi WhichKeyFloat guibg=#3A4251
+      set noshowmode
       '';
     extraConfigLua = ''
       require('todo-comments').setup{}
@@ -245,6 +231,20 @@ in
             }
         end
       require('lspsaga').setup{}
+      require('lualine').setup {
+        options = {
+          component_separators = { left = "", right = ""},
+          section_separators = { left = "", right = ""},
+        },
+        sections = {
+          lualine_a = {"branch", ""},
+          lualine_b = {"filename", "diff", diagnostics},
+          lualine_c = {""},
+          lualine_x = {"filetype", "fileformat"},
+          lualine_y = {"progress"},
+          lualine_z = {"mode"},
+        }
+      }
        '';
   };
 }

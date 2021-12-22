@@ -33,6 +33,8 @@
     pkgs.mpv
     pkgs.vifm
     pkgs.exa
+    pkgs.pre-commit
+    pkgs.gh
 
     pkgs.neofetch
     pkgs.onefetch
