@@ -7,7 +7,6 @@ let
   # });
   # nixvim = import (builtins.fetchGit {
   #   url = "https://github.com/builditluc/nixvim";
-  #   rev = "0cdf927789434e67f756ce6b54b1148874db1c2b";
   #   ref = "main";
   # });
   colorscheme = (import ../colors.nix).colorscheme;
@@ -64,8 +63,13 @@ in
       };
       telescope = {
         enable = true;
-        highlightTheme = "nord";
-        extensions.frecency.enable = true;
+        extensions = {
+          fzf-native = {
+            enable = true;
+            overrideGenericSorter = true;
+            overrideFileSorter = true;
+          };
+        };
       };
       bufferline = {
         enable = true;
