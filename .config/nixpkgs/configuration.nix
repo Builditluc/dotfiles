@@ -31,35 +31,41 @@
 
   homebrew.enable = true;
   homebrew.cleanup = "zap";
-  homebrew.taps = [ "homebrew/bundle" "homebrew/cask" "homebrew/core" ];
+  homebrew.taps = [ 
+    "homebrew/bundle" 
+    "homebrew/cask" 
+    "homebrew/core" 
+    "clangen/musikcube"
+  ];
   homebrew.brews = [ 
     "python@3.10" 
     "bpytop" 
     "iperf3" 
     "lolcat" 
     "pinentry" 
+    "musikcube"
   ];
   homebrew.casks = [ 
-    "steam" 
+    "steam"
     "rectangle" 
     "docker" 
     "onlyoffice" 
-    "discord" 
+    "discord"
     "betterdiscord-installer" 
     "obs" 
     "alacritty" 
-    "enpass" 
+    "enpass"
   ];
 
   homebrew.masApps = {
-    "Dark Reader" = 1438243180;
-    "GoodNotes" = 1444383602;
-    "WhatsApp" = 1147396723;
-    "iStudiez" = 402989379;
-    "OneDrive" = 823766827;
-    "Refined Github" = 1519867270;
-    "Enpass" = 732710998;
-  };
+   "Dark Reader" = 1438243180;
+   "GoodNotes" = 1444383602;
+   "WhatsApp" = 1147396723;
+   "iStudiez" = 402989379;
+   "OneDrive" = 823766827;
+   "Refined Github" = 1519867270;
+   "Enpass" = 732710998;
+   };
 
   fonts.enableFontDir = true;
   fonts.fonts = [ pkgs.nerdfonts ];

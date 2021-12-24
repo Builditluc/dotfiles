@@ -18,6 +18,7 @@ in
       config = "git --git-dir=$HOME/dotfiles --work-tree=$HOME";
     };
     initExtraFirst = ''
+      cat $HOME/scp-foundation.logo.asciiart
       auto-ls-git-onefetch () { if (ls -laF | grep .git/ >> /dev/null); then onefetch; fi; }
     '';
     initExtra = ''

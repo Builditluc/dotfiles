@@ -9,7 +9,7 @@ in
     userName = "Builditluc";
     ignores = [ "*~" ".DS_Store" ".diff" ];
     extraConfig = {
-      core = { editor = "nvim"; };
+      core = { editor = "nvim"; filemode = false; };
       pull = { rebase = true; };
     };
   };
