@@ -56,6 +56,8 @@ in
         plugins = [
           { name = "tami5/lspsaga.nvim"; }
           { name = "ahmedkhalf/project.nvim"; }
+          { name = "MunifTanjim/nui.nvim"; }
+          { name = "VonHeikemen/fine-cmdline.nvim"; }
         ];
       };
       lualine = {
@@ -123,6 +125,7 @@ in
       set noshowmode
       '';
     extraConfigLua = ''
+      vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap=true})
       require('todo-comments').setup{}
 
       require('project_nvim').setup{
