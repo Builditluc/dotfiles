@@ -58,6 +58,7 @@ in
           { name = "ahmedkhalf/project.nvim"; }
           { name = "MunifTanjim/nui.nvim"; }
           { name = "VonHeikemen/fine-cmdline.nvim"; }
+          { name = "vifm/vifm.vim"; }
         ];
       };
       lualine = {
@@ -134,7 +135,7 @@ in
       require('telescope').load_extension('projects')
 
      local __which_key = require('which-key')
-__which_key.register({['b'] = {['b'] = {'<cmd>BufferLineCyclePrev<cr>','Previous'},['j'] = {'<cmd>BufferLinePick<cr>','Jump'},['name'] = '+Buffers',['w'] = {'<cmd>bd<cr>','Wipeout'}},['f'] = {['f'] = {'<cmd>Telescope find_files<cr>','Find File'},['j'] = {'<cmd>FloatermNew vifm<cr>','vifm'},['name'] = '+Files'},['g'] = {'<cmd>FloatermNew lazygit<cr>','Lazygit'},['gcc'] = {['name'] = 'Comment'},['l'] = {['a'] = {'<cmd>Lspsaga code_action<cr>','Code Actions'},['d'] = {'<cmd>Telescope lsp_definitions<cr>','Definitions'},['k'] = {'<cmd>Lspsaga hover_doc<cr>','Hover Documentation'},['name'] = '+LSP',['r'] = {'<cmd>Lspsaga rename<cr>','Rename'},['t'] = {'<cmd>TroubleToggle<cr>','Toggle Troube'}},['p'] = {'<cmd>Telescope projects<cr>','Open Project'},['q'] = {'<cmd>q<cr>','Quit'},['r'] = {'<cmd>TodoTrouble<cr>','List all project todos'},['t'] = {['name'] = '+Train',['o'] = {'<cmd>TrainTextObj<cr>','Train for movements related to text objects'},['u'] = {'<cmd>TrainUpDown<cr>','Train for movements up and down'},['w'] = {'<cmd>TrainWord<cr>','Train for movements related to words'}},['w'] = {'<cmd>w<cr>','Save'}}, {['mode'] = 'n',['prefix'] = '<leader>'})
+__which_key.register({['b'] = {['b'] = {'<cmd>BufferLineCyclePrev<cr>','Previous'},['j'] = {'<cmd>BufferLinePick<cr>','Jump'},['name'] = '+Buffers',['w'] = {'<cmd>bd<cr>','Wipeout'}},['f'] = {['f'] = {'<cmd>Telescope find_files<cr>','Find File'},['j'] = {'<cmd>EditVifm<cr>','vifm'},['name'] = '+Files'},['g'] = {'<cmd>FloatermNew lazygit<cr>','Lazygit'},['gcc'] = {['name'] = 'Comment'},['l'] = {['a'] = {'<cmd>Lspsaga code_action<cr>','Code Actions'},['d'] = {'<cmd>Telescope lsp_definitions<cr>','Definitions'},['k'] = {'<cmd>Lspsaga hover_doc<cr>','Hover Documentation'},['name'] = '+LSP',['r'] = {'<cmd>Lspsaga rename<cr>','Rename'},['t'] = {'<cmd>TroubleToggle<cr>','Toggle Troube'}},['p'] = {'<cmd>Telescope projects<cr>','Open Project'},['q'] = {'<cmd>q<cr>','Quit'},['r'] = {'<cmd>TodoTrouble<cr>','List all project todos'},['t'] = {['name'] = '+Train',['o'] = {'<cmd>TrainTextObj<cr>','Train for movements related to text objects'},['u'] = {'<cmd>TrainUpDown<cr>','Train for movements up and down'},['w'] = {'<cmd>TrainWord<cr>','Train for movements related to words'}},['w'] = {'<cmd>w<cr>','Save'}}, {['mode'] = 'n',['prefix'] = '<leader>'})
       __which_key.setup{['show_help'] = true,['window'] = {['border'] = 'single'}}
 
       local lspkind = require('lspkind')

@@ -1,3 +1,6 @@
 [submodule ".config/vifm/colors"]
 	path = .config/vifm/colors
 	url = https://github.com/builditluc/vifm-colors
+[submodule ".config/vifm/icons"]
+	path = .config/vifm/icons
+	url = https://github.com/builditluc/vifm_devicons

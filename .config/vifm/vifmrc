@@ -15,6 +15,9 @@ set vicmd=nvim
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
+" Icons
+source $HOME/.config/vifm/icons/favicons.vifm
+
 " This makes vifm perform file operations on its own instead of relying on
 " standard utilities like `cp`.  While using `cp` and alike is a more universal
 " solution, it's also much slower when processing large amounts of files and
@@ -60,7 +63,7 @@ set norunexec
 " List of color schemes to try (picks the first one supported by the terminal)
 
 " colorscheme Default-256 Default
-colorscheme iceberg
+colorscheme nord
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -104,7 +107,7 @@ set slowfs=curlftpfs
 
 " Set custom status line look
 
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+set statusline="  %= %10u:%-7g %15s %20d  "
 
 " ------------------------------------------------------------------------------
 
@@ -328,7 +331,7 @@ fileviewer {*.docx},
 
 " What should be saved automatically between vifm sessions.  Drop "savedirs"
 " value if you don't want vifm to remember last visited directories for you.
-set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+set vifminfo=dhistory,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
 " ------------------------------------------------------------------------------

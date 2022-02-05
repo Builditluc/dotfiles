@@ -35,6 +35,7 @@
     pkgs.exa
     pkgs.pre-commit
     pkgs.gh
+    pkgs.wiki-tui
 
     pkgs.neofetch
     pkgs.onefetch
