@@ -59,6 +59,7 @@ in
           { name = "MunifTanjim/nui.nvim"; }
           { name = "VonHeikemen/fine-cmdline.nvim"; }
           { name = "vifm/vifm.vim"; }
+          { name = "mhinz/vim-startify"; }
         ];
       };
       lualine = {
