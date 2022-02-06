@@ -8,7 +8,6 @@
 
       yabai -m config layout              bsp
       yabai -m config mouse_follows_focus true
-      yabai -m config split_ratio         .5
 
       # padding
       yabai -m config top_padding         10
@@ -42,19 +41,18 @@
       cmd + shift - l : yabai -m window --focus east
 
       # swap managed window
-      shift + alt - h : yabai -m window --swap west
-      shift + alt - j : yabai -m window --swap south 
-      shift + alt - k : yabai -m window --swap north
-      shift + alt - l : yabai -m window --swap east
+      alt - h : yabai -m window --warp west
+      alt - j : yabai -m window --warp south 
+      alt - k : yabai -m window --warp north
+      alt - l : yabai -m window --warp east
 
       # fast focus desktop
-      shift + alt - 0 : yabai -m space --focus recent
-      shift + alt - 1 : yabai -m space --focus 1
-      shift + alt - 2 : yabai -m space --focus 2 
-      shift + alt - 3 : yabai -m space --focus 3 
+      shift + alt - p : yabai -m space --focus prev
+      shift + alt - n : yabai -m space --focus next
 
-      # send window to desktop and follow focus
-      cmd + shift - - : yabai -m window --space next; yabai -m space --focus next
+      alt - p : yabai -m window --space prev; yabai -m space --focus prev
+      alt - n : yabai -m window --space next; yabai -m space --focus next
+
     '';
   };
 }
