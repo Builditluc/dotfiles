@@ -116,11 +116,9 @@ in
   ];
   homebrew.casks = [ 
     "steam"
-    "rectangle" 
     "docker" 
     "onlyoffice" 
     "discord"
-    "betterdiscord-installer" 
     "obs" 
     "alacritty" 
     "enpass"
@@ -158,8 +156,8 @@ in
     loginwindow.autoLoginUser = "builditluc";
   };
 
+  #TODO: change necessary settings to enable yabai and skhd
   system.activationScripts.extraUserActivation.text = ''
-    defaults write com.knollsoft.Rectangle gapSize -int 10
     osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/builditluc/wallpaper.png"'
     ln -sf ${pkgs.callPackage ./custom-pkgs/firefox { } }/Applications/Firefox.app /Applications
   '';

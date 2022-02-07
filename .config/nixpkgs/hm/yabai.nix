@@ -19,8 +19,9 @@
       yabai -m config window_opacity      false
       yabai -m config window_shadow       false
       yabai -m config window_placement    second_child
+      yabai -m config window_topmost      on
 
-      yabai -m config external_bar all:26:0
+      yabai -m config external_bar        all:26:0
 
       # rules
       yabai -m rule --add app="^System Preferences$" manage=off
@@ -35,16 +36,18 @@
     target = ".config/skhd/skhdrc";
     text = ''
       # focus window
-      cmd + shift - h : yabai -m window --focus west
-      cmd + shift - j : yabai -m window --focus south 
-      cmd + shift - k : yabai -m window --focus north
-      cmd + shift - l : yabai -m window --focus east
+      alt - h : yabai -m window --focus west
+      alt - j : yabai -m window --focus south 
+      alt - k : yabai -m window --focus north
+      alt - l : yabai -m window --focus east
 
       # swap managed window
-      alt - h : yabai -m window --warp west
-      alt - j : yabai -m window --warp south 
-      alt - k : yabai -m window --warp north
-      alt - l : yabai -m window --warp east
+      shift + alt - h : yabai -m window --warp west
+      shift + alt - j : yabai -m window --warp south 
+      shift + alt - k : yabai -m window --warp north
+      shift + alt - l : yabai -m window --warp east
+
+      shift + alt - f : yabai -m window --toggle zoom-fullscreen
 
       # fast focus desktop
       shift + alt - p : yabai -m space --focus prev
@@ -52,7 +55,6 @@
 
       alt - p : yabai -m window --space prev; yabai -m space --focus prev
       alt - n : yabai -m window --space next; yabai -m space --focus next
-
     '';
   };
 }
