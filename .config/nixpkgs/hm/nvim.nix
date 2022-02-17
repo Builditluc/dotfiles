@@ -9,7 +9,7 @@ let
   #   url = "https://github.com/builditluc/nixvim";
   #   ref = "main";
   # });
-  colorscheme = (import ../colors.nix).colorscheme;
+  colorscheme = (import ../colors.nix).colorscheme-name;
 in
 {
   imports = [ 
@@ -48,7 +48,7 @@ in
       normal."<s-v>".action = "<c-w>v";
       normal."<s-s>".action = "<c-w>s";
     };
-    colorscheme = "nord";
+    colorscheme = colorscheme;
     globals.mapleader = ";";
     plugins = {
       packer = {
@@ -60,6 +60,7 @@ in
           { name = "VonHeikemen/fine-cmdline.nvim"; }
           { name = "vifm/vifm.vim"; }
           { name = "mhinz/vim-startify"; }
+          { name = "pineapplegiant/spaceduck"; }
         ];
       };
       lualine = {

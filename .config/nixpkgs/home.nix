@@ -40,7 +40,7 @@
     pkgs.neofetch
     pkgs.onefetch
 
-    pkgs.rustup
+    # pkgs.rustup
     pkgs.rust-analyzer
     pkgs.pyright
     pkgs.nixfmt

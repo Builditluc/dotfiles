@@ -29,6 +29,7 @@ in
     ./hm/firefox.nix
     ./hm/git.nix
     ./hm/nvim.nix
+    ./hm/starship.nix
     ./hm/yabai.nix
     ./hm/zsh.nix
     ./home.nix 
@@ -68,7 +69,6 @@ in
       spacing_left               = 25;
       spacing_right              = 15;
 
-      # background_color = "0x${colorscheme.colors.base01}";
       background_color           = "0xff202020";
       foreground_color           = "0xffa8a8a8";
       power_icon_color           = "0xffcd950c";

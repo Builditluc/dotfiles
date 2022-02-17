@@ -3,4 +3,5 @@ let
 in
 {
   colorscheme = (import "${nix-colors}/schemes").nord;
+  colorscheme-name = "nord";
 }

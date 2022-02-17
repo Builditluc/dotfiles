@@ -27,6 +27,7 @@
       yabai -m rule --add app="^System Preferences$" manage=off
       yabai -m rule --add app="^Mail$" manage=off
       yabai -m rule --add app="^Enpass$" manage=off
+      yabai -m rule --add app="^Tor Browser$" manage=off
 
       echo "yabai configuration loaded.."
     '';
