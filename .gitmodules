@@ -4,3 +4,6 @@
 [submodule ".config/vifm/icons"]
 	path = .config/vifm/icons
 	url = https://github.com/builditluc/vifm_devicons
+[submodule "dotnix"]
+	path = dotnix
+	url = https://github.com/builditluc/dotnix
