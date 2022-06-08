@@ -9,7 +9,6 @@
     dock = {
       autohide = true;
       minimize-to-application = true;
-      orientation = "left";
       show-recents = false;
     };
     NSGlobalDomain = {
@@ -21,7 +20,6 @@
     };
   };
 
-  #TODO: change necessary settings to enable yabai and skhd
   system.activationScripts.extraUserActivation.text = ''
     osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/builditluc/wallpaper.png"'
     ln -sf ${pkgs.callPackage ../../custom-pkgs/firefox { } }/Applications/Firefox.app /Applications
@@ -31,8 +29,8 @@
 
   imports = [
     ./brew.nix
-    ./spacebar.nix
-    ./yabai-skhd.nix
+    # ./spacebar.nix
+    # ./yabai-skhd.nix
     ./zsh.nix
   ];
 }
