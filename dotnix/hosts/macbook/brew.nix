@@ -18,6 +18,7 @@
       "obs"
       "alacritty"
       "pycharm"
+      "rectangle"
     ];
     masApps = {
        "GoodNotes" = 1444383602;
