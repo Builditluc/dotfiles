@@ -6,6 +6,7 @@
     rust-analyzer
 
     gcc
+    fd
   ];
   programs.nixvim = {
     enable = true;
