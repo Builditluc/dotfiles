@@ -54,6 +54,7 @@
           { name = "mhinz/vim-startify"; }
           { name = "pineapplegiant/spaceduck"; }
           { name = "elkowar/yuck.vim"; }
+          { name = "vim-latex/vim-latex"; }
         ];
       };
       lualine = {
