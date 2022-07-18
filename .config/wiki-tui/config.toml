@@ -7,5 +7,12 @@ hightlight_text = "c0caf5"
 text = "c0caf5"
 search_match = "f7768e"
 
+[keybindings]
+down.key = "j"
+up.key = "k"
+left.key = "h"
+right.key = "l"
+
 [features]
+toc = true
 links = false
